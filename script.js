@@ -119,6 +119,7 @@ const changeAll = () => {
 const changeAllWomens = () => {
     changeWomensOptions()
     changeWomensTopPic()
+    changeWomensProduct()
 }
     const changeTopPic = () =>{
         // clearing out mainImage content div
@@ -181,7 +182,7 @@ const changeAllWomens = () => {
             let imageContainer = document.createElement("img")
             imageContainer.setAttribute('src',images.pic)
             imageContainer.setAttribute('class','product')
-            
+            productBox.append(imageContainer)
 
         })
     }
