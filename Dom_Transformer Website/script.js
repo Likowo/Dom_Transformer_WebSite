@@ -1,4 +1,18 @@
-// DOM MANIPULATION
+// DOM( Document Object Model) MANIPULATION , application programming interface (API) enables devlopers to make the UI dynamic by usx JS to - //- add/remove elements to/from the doc 
+    //.remove()
+  
+    let createdEle = document.createElement('div')
+       createdEle.setAttribute('class','newFreezer')
+    // 1. Target an Element or Section
+    let body = document.querySelector('body')
+ // .append()
+      body.append(createdEle)
+//-change the content of elements-using .innerHTML
+    const addContent = () => {
+        
+    }
+
+//- chnage the style properties of elements.
 // Goal: Retail Site 
     // Dynamically change the Entire Site with a click of a button
     // General -- Mens -- Womens -- Children
@@ -103,6 +117,7 @@
 // -----------------------
 let mainImage = document.querySelector('.mainImg')
 console.log(mainImage)
+const mainPic = document.querySelector('.topPic')
 let option = document.querySelector('.options')
 let miniOp = document.querySelectorAll('.choice')
 let productBox = document.querySelector('.productContainer')
@@ -122,24 +137,22 @@ const changeAllWomens = () => {
     changeWomensProduct()
 }
     const changeTopPic = () =>{
-        // clearing out mainImage content div
-        mainImage.innerText = ""
-        // createImage 
-        let newimage = document.createElement('img')
-            newimage.setAttribute('src', majorContainer.mens.headImage)
-            newimage.setAttribute('class','topPic')
-            // replaceWith current
-            mainImage.replaceWith(newimage)
-
+        mainPic.src = majorContainer.mens.headImage
     }
 
+    // / clearing out mainImage content div
+    // mainImage.innerText = ""
+    // // createImage 
+    // let newimage = document.createElement('img')
+    //     newimage.setAttribute('src', majorContainer.mens.headImage)
+    //     newimage.setAttribute('class','topPic')
+    //     // replaceWith current
+    //     mainImage.replaceWith(newimage)
+
+
+//function to change womens top pic
     const changeWomensTopPic = () => {
-        //Clearing out the mainImage content div
-        mainImage.textContent = ""
-        let newImage = document.createElement('img')
-            newImage.setAttribute('src',majorContainer.womens.headImage)
-            newImage.setAttribute('class',"topPic")
-            mainImage.replaceWith(newImage)
+        mainPic.src = majorContainer.womens.headImage
     }
 
     const changeOptions = () =>{
